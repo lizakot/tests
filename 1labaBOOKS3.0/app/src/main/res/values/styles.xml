@@ -1,0 +1,5 @@
+<resources>
+    <!-- Base application theme. Diable the action bar to use a toolbar instead -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+</resources>
