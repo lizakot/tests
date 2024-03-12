@@ -14,6 +14,12 @@ import java.util.List;
 
 @Parcel
 public class Book {
+
+    public Book(String title, String[] authors, String openLibraryId) {
+        this.title = title;
+        this.authors = authors;
+        this.openLibraryId = openLibraryId;
+    }
     @SerializedName("cover_edition_key")
     private String openLibraryId;
     @SerializedName("author_name")
@@ -43,6 +49,11 @@ public class Book {
 
     public String getCoverUrl() {
         return "https://covers.openlibrary.org/b/olid/" + openLibraryId + "-L.jpg?default=false";
+    }
+
+    // Добавляем метод для установки значения openLibraryId
+    public void setOpenLibraryId(String openLibraryId) {
+        this.openLibraryId = openLibraryId;
     }
 
     public static Book fromJson(JSONObject jsonObject) {

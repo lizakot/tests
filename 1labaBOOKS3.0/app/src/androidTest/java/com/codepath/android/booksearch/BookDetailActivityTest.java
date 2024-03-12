@@ -31,12 +31,12 @@ public class BookDetailActivityTest {
 
     @Test
     public void testBookCoverDisplayed() {
-        ActivityScenario.launch(BookDetailActivity.class);
         // Проверяем, что обложка книги загружается
         Espresso.onView(ViewMatchers.withId(R.id.ivBookCover))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
     }
 }
+
 
 
 
